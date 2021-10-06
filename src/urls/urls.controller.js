@@ -21,6 +21,8 @@ function list(res) {
   res.json({ data: urls });
 }
 
+function read(res){}
+
 function create(res) {
   const data = res.locals.data;
   const newUrlId = urls.length + 1;
@@ -33,6 +35,12 @@ function create(res) {
   res.status(201).json({ data: newUrl });
 }
 
+function update(res){
+  
+}
+
+
+
 
 
 
@@ -40,5 +48,7 @@ function create(res) {
 module.export={
     list,
     create:[isValidURL, create],
+    update,
+    read,
 
 }
